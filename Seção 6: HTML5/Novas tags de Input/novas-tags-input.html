@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novas Tags de Input</title>
+</head>
+<body>
+
+    <form action="">
+
+        <!-- Associar Label com os elementos - Boa prática -->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" placeholder="Digite seu nome" required>
+        <br><br>
+
+        <!-- Atributo required (obriga o usuário a preencher o input) e autofocus (foca um input em específico) -->
+
+        <!-- Novos Inputs e atributos HTML5 -->
+        <!-- Input: tipo Email -->
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Digite um endereço de e-mail" required autofocus>
+        <br><br>
+
+        <!-- Input: tipo Número -->
+        <label for="numero">Número</label>
+        <input type="number" id="numero" min="5" max="100" step="2" placeholder="Digite um número" required>
+        <br><br>
+
+        <!-- Input: tipo Url -->
+        <label for="url">Url</label>
+        <input type="url" id="url" placeholder="Digite uma url - ex: http://www" required>
+        <br><br>
+
+        <!-- Input: tipo Pesquisar -->
+        <label for="pesquisa">Pesquisa</label>
+        <input type="search" id="pesquisa" placeholder="Digite algo">
+        <br><br>
+
+        <!-- Input: tipo Range -->
+        <label for="range">Range</label>
+        <input type="range" id="range" min="1" max="100" value="5">
+        <br><br>
+
+        <!-- Input: tipo Data -->
+        <label for="data">Data</label>
+        <input type="date" id="data">
+        <br><br>
+
+        <!-- Input: tipo Color -->
+        <label for="cor">Cor</label>
+        <input type="color" id="cor">
+        <br><br>
+
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+</body>
+</html>

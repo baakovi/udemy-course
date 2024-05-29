@@ -1,0 +1,21 @@
+* {
+    font-family: sans-serif;
+}
+
+/* ------------ Sombras ------------ */
+#box {
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    padding: 8px;
+    background: #009670;
+    /* Funciona como o text-shadow */
+    box-shadow: 6px 6px #9fa09f, -6px -6px #295829;
+}
+
+#box h1 {
+    color: white;
+    font-size: 60px;
+    /* Text-shadow: Primeiro valor - horizontal, segundo valor - vertical, terceiro valor - blur */
+    text-shadow: 4px 4px 2px #185747;
+}
