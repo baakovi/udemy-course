@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formatando Links</title>
+
+	<style type="text/css">
+
+		a {
+			text-decoration: none;
+			font-family: sans-serif;
+			font-size: 18px;
+			padding: 5px;
+		}
+
+		/* Formatando estados dos links */
+		/* 
+			Quatro estados:
+
+				- Links não visitados
+				- Links Visitados
+				- Efeito Hover, quando passa o cursor sobre o link
+				- Links ativos
+		*/
+
+		/* Primeiro estado: Links não visitados */
+		a:link {
+			color: #b9c941;
+		}
+
+		/* Segundo estado: Links visitados */
+		a:visited {
+			color: #8b8f8b;
+		}
+
+		/* Terceiro estado: Efeito Hover */
+		a:hover {
+			color: #2a4e08;
+			background: whitesmoke;
+			border-radius: 4px;
+		}
+
+		/* Quarto estado: Links ativos -- quando clicado */
+		a:active {
+			color: #e4f371;
+		}
+
+	</style>
+
+</head>
+<body>
+
+	<!-- Hyper link reference -->
+	<a href="https://www.google.com.br" target="_blank">Google</a> |
+	<a href="https://www.tecmundo.com.br" target="_blank">Tec Mundo</a> |
+	<a href="https://www.acer.com">Acer</a> |
+	<a href="https://www.megacurioso.com.br" target="_blank">Mega Curioso</a>
+	
+</body>
+</html>

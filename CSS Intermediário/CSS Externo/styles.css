@@ -1,0 +1,17 @@
+* {
+    font-family: sans-serif;
+    text-decoration: none;
+    background: whitesmoke;
+}
+
+h1 {
+    color: #f0931a;
+}
+
+p {
+    color: gray;
+}
+
+a {
+    color: #fa6125;
+}
