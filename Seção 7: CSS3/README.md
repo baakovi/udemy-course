@@ -17,4 +17,3 @@ Os recursos aprendidos nessa seção, são recursos novos e não são suportados
 - [CSS Gradients](https://www.w3schools.com/css/css3_gradients.asp)
 - [CSS text-shadow Property](https://www.w3schools.com/cssref/css3_pr_text-shadow.php)
 - [CSS box-shadow Property](https://www.w3schools.com/cssref/css3_pr_box-shadow.php)
-- []()
