@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<!-- <body onload="PageReload()"> -->
+<body onresize="Resize()">
+
+    <!-- Eventos do Mouse -->
+    <div ondblclick="msgBoasVindas()" style="background: #CCC; height: 150px; width: 150px;"></div>
+    <!-- <div onmouseout="msgBoasVindas()" style="background: #CCC; height: 150px; width: 150px;"></div> -->
+    <script src="mouse.js"></script>
+
+
+    <!-- Eventos do Teclado -->
+    <!-- <input onkeydown="alert('Uma tecla foi pressionada')" type="text"> -->
+    <!-- <input onkeypress="alert('Uma tecla foi pressionada')" type="text"> -->
+    <input onkeyup="alert('Uma tecla foi liberada')" type="text">
+    <script src="teclado.js"></script>
+
+
+    <!-- Eventos da Janela -->
+    <script src="janela.js"></script>
+
+
+    <!-- Eventos de Formulários -->
+    <label for="focu">Evento Focus</label>
+    <input onfocus="Focus()" type="text" id="focu">
+    <!-- <input onfocus="Focus()" onblur="Blur()" type="text" id="focu"> -->
+    
+    <select onchange="Change()" name="" id="">
+        <option value="1">Primeira opção</option>
+        <option value="2">Segunda opção</option>
+    </select>
+    <script src="forms.js"></script>
+    
+</body>
+</html>
