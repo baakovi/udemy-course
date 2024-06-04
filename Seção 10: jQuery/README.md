@@ -36,3 +36,17 @@
 - <b>Localmente.</b>
 
 Baixar o arquivo, incluir ele em uma pasta no nosso projeto, e importar ele pelo script, como um arquivo JS normal.
+
+<br>
+<br>
+
+### Eventos no jQuery
+Exemplo: <b>Função .ready()</b>
+
+```javascript
+$( document ).ready( function() {
+    console.log( "O DOM está carregado!" )
+});
+
+// Indica que o DOM foi construído para ser utilizado no site, deixando-o mais seguro.
+```

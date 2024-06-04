@@ -40,13 +40,13 @@
             </div>
 
             <div class="col-md-4">
-                <div style="height: 100px; width: 100px; background:#428bca;" class="pull-left"></div>
-                <div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="pull-left"></div>
+                <div style="height: 100px; width: 100px; background:#428bca;" class="div-2 pull-left"></div>
+                <div style="height: 100px; width: 100px; background:#5cb85c; margin-left:15px" class="div-2 pull-left"></div>
             </div>
 
             <div class="col-md-4">
-                <input type="text" class="form-control" />
-                <input type="text" class="form-control" />
+                <input id="campo-1" type="text" class="form-control" />
+                <input id="campo-2" type="text" class="form-control" />
             </div>
         </div>
 
@@ -54,18 +54,18 @@
 
         <div class="row">
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger" onclick="">Esconder parágrafos</button>
-                <button type="button" class="btn btn-success" onclick="">Exibir parágrafos</button>
+                <button type="button" class="btn btn-danger" onclick="ocultaElementoPorTag('p')">Esconder parágrafos</button>
+                <button type="button" class="btn btn-success" onclick="exibeElementoPorTag('p')">Exibir parágrafos</button>
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger">Esconder divs</button>
-                <button type="button" class="btn btn-success">Exibir divs</button>
+                <button type="button" class="btn btn-danger" onclick="ocultaElementoPorClasse('div-2')">Esconder divs</button>
+                <button type="button" class="btn btn-success" onclick="exibeElementoPorClasse('div-2')">Exibir divs</button>
             </div>
 
             <div class="col-md-4">
-                <button type="button" class="btn btn-danger">Esconder inputs</button>
-                <button type="button" class="btn btn-success">Exibir inputs</button>
+                <button type="button" class="btn btn-danger" onclick="ocultaElementoPorID('campo-1'); ocultaElementoPorID('campo-2')">Esconder inputs</button>
+                <button type="button" class="btn btn-success" onclick="exibeElementoPorID('campo-1'); exibeElementoPorID('campo-2')">Exibir inputs</button>
             </div>
 
         </div>

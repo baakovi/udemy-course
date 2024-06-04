@@ -1,7 +1,7 @@
 /*
     Eventos - mouse
 
-    - onlick: acionado no clique do mouse.
+    - onclick: acionado no clique do mouse.
     
     - ondblclick: acionado no clique duplo do mouse.
 
