@@ -1,0 +1,27 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px
+    ;
+}
+
+.players {
+    border: 0;
+    text-align: center
+    ;
+}
+
+.display-game {
+    display: inline-block
+    ;
+}
+
+.palco {
+    display: none; 
+    margin-top: 50px; 
+    text-align: center;
+}
+
+.tables {
+    width: 100px;
+    height: 100px;
+}

@@ -6,8 +6,100 @@
 	<title>Jogo da Velha</title>
 
 	<script src="../../node_modules/jquery/dist/jquery.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="script.js"></script>
 </head>
 <body>
+
+	<div id="pagina_inicial" align="center">
+		<table border="0" width="600">
+			<tbody>
+				<tr>
+					<td colspan="3" align="center">Jogo da Velha</td>
+				</tr>
+
+				<tr>
+					<td align="center">
+						<img src="imagens/jogador_1.png" alt="">
+						<br>
+						<input id="entrada-apelido-1" class="players" type="text" maxlength="10" placeholder="Apelido Jogador 1">
+					</td>
+					
+					<td align="center">
+						<img id="btn-iniciar" src="imagens/iniciar.png" alt="">
+					</td>
+
+					<td align="center">
+						<img src="imagens/jogador_2.png" alt="">
+						<br>
+						<input id="entrada-apelido-2" class="players" type="text" maxlength="10" placeholder="Apelido Jogador 2">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div id="palco_jogo" class="palco">
+		<div class="display-game">
+			<img src="imagens/jogador_1.png" alt="">
+			<br>
+			<span id="player-name-1"></span>
+		</div>
+
+		<div class="display-game">
+			<table border="0">
+				<tr>
+					<td style="border-bottom: solid 1px  #464037; border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td style="border-bottom: solid 1px  #464037; border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td style="border-bottom: solid 1px  #464037;">
+						<div class="tables jogada"></div>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="border-bottom: solid 1px  #464037; border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td style="border-bottom: solid 1px  #464037; border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td style="border-bottom: solid 1px  #464037;">
+						<div class="tables jogada"></div>
+					</td>
+				</tr>
+
+				<tr>
+					<td style="border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td style="border-right: solid 1px #464037;">
+						<div class="tables jogada"></div>
+					</td>
+
+					<td>
+						<div class="tables jogada"></div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="display-game">
+			<img src="imagens/jogador_2.png" alt="">
+			<br>
+			<span id="player-name-2"></span>
+		</div>
+	</div>
 	
 </body>
 </html>
