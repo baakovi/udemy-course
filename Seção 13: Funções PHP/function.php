@@ -3,7 +3,7 @@
     /*
 
         As funções do PHP servem para fazer alguma atividade específica e portanto podem ser reaproveitadas sempre quando essa necessidade específica for necessária, não havendo a necessidade de recriá-las em cada um desses momentos.
-        ----- REGRAS PARA CRIAÇÃO DE FUNÇÕES NO PHP
+        ----- REGRAS PARA CRIAÇÃO DE FUNÇÕES NO PHP -----
         - Não é permitido a utilizada de caracteres especiais (exceto o caractere '_')
         - Não pode ser iniciada com números
 
