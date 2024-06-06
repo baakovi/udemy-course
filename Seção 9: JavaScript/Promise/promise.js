@@ -10,10 +10,10 @@ let minhaPromessa = new Promise(function(resolve, reject) {
         reject("Algo deu errado!"); // Rejeitando a Promise com um erro
       }
     }, 2000); // Espera 2 segundos
-  });
+});
   
-  // Consumindo a Promise
-  minhaPromessa
+// Consumindo a Promise
+minhaPromessa
     .then(function(resultado) {
       console.log("Sucesso:", resultado); // Executa se a Promise for resolvida
     })
