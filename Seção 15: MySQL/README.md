@@ -49,3 +49,45 @@
 <b>Char:</b> tamanho fixo e otimizado para pesquisa.
 <br>
 <b>Varchar:</b> tamanho variável e tende a ocupar menos espaço em disco.
+
+
+### Filtrando registros
+```sql
+SELECT * FROM tb_cursos WHERE investimento < 50.00
+
+SELECT * FROM tb_cursos WHERE investimento < 50.00 AND id_curso > 1
+```
+
+### Atualizando registros
+```sql
+UPDATE <tabela> SET <campo> = <valor> WHERE <condicao>;
+
+UPDATE tb_pessoas SET nome = 'José da Silva', idade = 14 WHERE id = 14;
+
+UPDATE tb_pessoas SET interesse = 'Esporte' WHERE idade > 10 AND idade <= 20;
+```
+
+### Excluindo registros
+```sql
+DELETE FROM <tabela> WHERE <condicao>;
+
+DELETE FROM tb_pessoas WHERE id = 5;
+
+DELETE FROM tb_pessoas WHERE idade = 20 AND interesse = 'Esporte';
+
+DELETE FROM tb_pessoas WHERE estado = 'SP' AND idade < 30;
+```
+
+<br>
+
+## Relacionamento entre tabelas
+<b>Tipos de relacionamentos</b>
+- 1 para 1;
+- 1 para vários;
+- Vários para vários;
+- Chave primária;
+- Chave estrangeira.
+
+<br>
+
+## Junções entre tabelas
