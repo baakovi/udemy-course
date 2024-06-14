@@ -21,8 +21,10 @@
     
         // var_dump($dados);
         if (isset($dados['usuario'])) {
+            $_SESSION['id_usuario'] = $dados['id'];
             $_SESSION['usuario'] = $dados['usuario'];
             $_SESSION['email'] = $dados['email'];
+
             header('Location: home.php');
         } 
         

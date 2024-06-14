@@ -21,3 +21,26 @@ $(document).ready( function() {
         if(campo_vazio) return false;
     })
 })
+
+
+// Arquivo home.php
+$(document).ready( function() {
+    // Associar o evento de click ao botão
+    $('#btn_tweet').click( function() {
+
+        if($('#texto_tweet').val().length > 0) {
+            
+            $.ajax({
+                url: 'inclui_tweet.php',
+                method: 'post',
+                // data: { texto_tweet: $('#texto_tweet').val() },
+                data: $('#form_tweet').serialize(),
+                success: function(data) {
+                    $('#texto_tweet').val('');
+                    alert('Tweet publicado.');
+                }
+            });
+        }
+
+    })
+})
