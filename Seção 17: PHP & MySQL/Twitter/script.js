@@ -37,10 +37,24 @@ $(document).ready( function() {
                 data: $('#form_tweet').serialize(),
                 success: function(data) {
                     $('#texto_tweet').val('');
-                    alert('Tweet publicado.');
+                    atualizaTweet();
                 }
             });
         }
 
     })
+
+    function atualizaTweet() {
+        // Carregar os tweets
+
+        $.ajax({
+            url: 'get_tweet.php',
+            success: function(data) {
+                $('#tweets').html(data)
+            }
+        });
+    }
+
+    atualizaTweet();
+
 })

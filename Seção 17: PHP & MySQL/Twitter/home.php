@@ -80,6 +80,9 @@
                         </form>
                     </div>
                 </div>
+
+				<div id="tweets" class="list-group"></div>
+
 			</div>
 
 			<div class="col-md-3">
