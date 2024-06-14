@@ -1,9 +1,11 @@
 <?php
 
+    session_start();
+
     require_once('db.class.php');
 
     $usuario = $_POST['usuario'];
-    $senha = $_POST['senha'];
+    $senha = md5($_POST['senha']);
 
     $sql = "SELECT * FROM usuarios WHERE usuario = '$usuario' AND senha = '$senha'";
 
@@ -17,7 +19,16 @@
     if($result) {
         $dados = mysqli_fetch_array($result);
     
-        var_dump($dados);
+        // var_dump($dados);
+        if (isset($dados['usuario'])) {
+            $_SESSION['usuario'] = $dados['usuario'];
+            $_SESSION['email'] = $dados['email'];
+            header('Location: home.php');
+        } 
+        
+        else {
+            header('Location: index.php?erro=1');
+        }
     } else {
         echo "Erro na execução da consulta, favor entrar em contato com o administrador do site";
     }
