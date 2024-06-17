@@ -21,7 +21,55 @@
 		<!-- bootstrap - link cdn -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript">
+
+			$(document).ready( function() {
+				$('#btn_procurar_pessoas').click( function() {
+
+					if($('#nome_pessoa').val().length > 0) {
+						
+						$.ajax({
+							url: 'get_pessoas.php',
+							method: 'post',
+							data: $('#form_procurar_pessoas').serialize(),
+							success: function(data) {
+								// alert(data);
+								$('#pessoas').html(data);
+
+								$('.btn_seguir').click( function() {
+									let id_usuario = $(this).data('id_usuario');
+
+									$.ajax({
+										url: 'seguir.php',
+										method: 'post',
+										data: { seguir_id_usuario: id_usuario },
+										success: function(data) {
+											alert('Registro efetuado.');
+										}
+									});
+								})
+
+								$('.btn_deixar_seguir').click( function() {
+									let id_usuario = $(this).data('id_usuario');
+
+									$.ajax({
+										url: 'deixar_seguir.php',
+										method: 'post',
+										data: { deixar_seguir_id_usuario: id_usuario },
+										success: function(data) {
+											alert('Você parou de seguir este usuário.');
+										}
+									});
+								})
+							}
+						});
+					}
+
+				})
+
+			})
+
+		</script>
 	
 	</head>
 
@@ -42,6 +90,7 @@
 	        
 	        <div id="navbar" class="navbar-collapse collapse">
 	          <ul class="nav navbar-nav navbar-right">
+			  	<li><a href="home.php">Home</a></li>
 	            <li><a href="sair.php">Sair</a></li>
 	          </ul>
 	        </div><!--/.nav-collapse -->
@@ -71,24 +120,23 @@
 	    	<div class="col-md-6">
 	    		<div class="panel panel-default">
                     <div class="panel-body">
-                        <form id="form_tweet" class="input-group">
-                            <input type="text" id="texto_tweet" name="texto_tweet" class="form-control" placeholder="O que está acontecendo agora?" maxlength="140">
+                        <form id="form_procurar_pessoas" class="input-group">
+                            <input type="text" id="nome_pessoa" name="nome_pessoa" class="form-control" placeholder="Quem você está procurando?" maxlength="140">
 
                             <span class="input-group-btn">
-                                <button class="btn btn-default" id="btn_tweet" type="button">Tweet</button>
+                                <button class="btn btn-default" id="btn_procurar_pessoas" type="button">Procurar</button>
                             </span>
                         </form>
                     </div>
                 </div>
 
-				<div id="tweets" class="list-group"></div>
+				<div id="pessoas" class="list-group"></div>
 
 			</div>
 
 			<div class="col-md-3">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h4><a href="#">Procurar por pessoas</a></h4>
                     </div>
                 </div>
             </div>
